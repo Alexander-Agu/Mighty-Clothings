@@ -79,6 +79,7 @@
     p button{
         border: none;
         outline: none;
+        text-decoration: underline;
         background-color: transparent;
         font-weight: bolder;
     }
