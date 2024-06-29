@@ -1,0 +1,84 @@
+/* >> RESET */
+    *,
+    *::before,
+    *::after{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+/*  */
+
+
+/* >> GENERAL STYLES */
+    html{
+        scroll-behavior: smooth;
+    }
+/*  */
+
+
+/* >> LOGIN AND SIGN UP PAGE STYLES */
+/* > Conatiner */
+    .container{
+        height: 100vh;
+        width: 100%;
+
+        display: grid;
+        place-content: center;
+    }
+
+    .log-container{
+        height: 500px;
+        width: 300px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+/* > Login , Sign Info Styles */
+    .log-info{
+        height: 2500px;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+/* > Name, Number, Password DIV styles */
+    .name,
+    .number,
+    .password{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Login info inputs */
+    .name input,
+    .number input,
+    .password input{
+        padding: 16px;
+        height: 50px;
+        border-radius: 16px;
+        background-color: rgb(231, 231, 231);
+        outline: none;
+        border: none;
+    }
+
+    .log-info button{
+        width: 60px;
+        height: 40px;
+        border: none;
+        outline: none;
+        background-color: black;
+        color: white;
+    }
+
+    p button{
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-weight: bolder;
+    }
