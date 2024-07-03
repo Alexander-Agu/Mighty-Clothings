@@ -13,21 +13,47 @@ const numberInput = document.getElementById("js-number");
 const passwordInput = document.getElementById("js-password");
 const jsLoginBTN = document.getElementById("js-login");
 
+
+let loginInfo = [];
+
 // When you click on the sign up button you should be directed to the sign up page
-let signClick = false
 signUp.onclick = ()=>{
-    signClick = true
     names.textContent = "Create Username";
     number.textContent = "Create Number";
-    password.textContent = "Create Password"
-    loginButton.innerHTML = ""
+    password.textContent = "Create Password";
+    loginButton.innerHTML = "";
+    document.querySelector('.sign-section').innerHTML = '';
 
-    let button = document.createElement("button");
-    button.id = "js-login"
-    button.textContent = 'Sign Up'
-    loginButton.append(button)
-}
+    loginButton.innerHTML = "<button id='js-signUp' onclick='appendDetails()'>Sign Up</button>"  
 
-jsLoginBTN.onclick = ()=>{
-    if(signUp.onclick === true){}
+    // Handles the sign in...
+    // Saves info into local storage
+    document.getElementById("js-signUp").onclick = ()=>{
+        let signInDetails = {
+            name: nameInput.value,
+            number: numberInput.value,
+            password: passwordInput.value
+        };
+
+        const stringIfiedObject = JSON.stringify(signInDetails);
+        loginInfo.push(stringIfiedObject);
+        const stringIfiedArray = JSON.stringify(loginInfo);
+
+        localStorage.setItem("Detail", stringIfiedArray);
+
+    }
+};
+
+
+login.onclick = ()=>{
+    const backToArray = JSON.parse(localStorage.getItem("Detail")); 
+    const backToObject = JSON.parse(backToArray);
+
+    if(backToObject.name === nameInput.value && backToObject.number === numberInput.value && backToObject.password === passwordInput.value){
+        console.log("Alex" )
+    }
+
+    else{
+        alert("Please enter the correct details")
+    }
 }

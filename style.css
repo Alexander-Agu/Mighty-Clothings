@@ -83,3 +83,12 @@
         background-color: transparent;
         font-weight: bolder;
     }
+
+    #js-signUp{
+        width: 60px;
+        height: 40px;
+        border: none;
+        outline: none;
+        background-color: rebeccapurple;
+        color: white;
+    }
