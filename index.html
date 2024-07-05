@@ -1,13 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mighty Clothings</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-    <script src="script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mighty Clothings</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <h2>Mighty Clothings</h2>
+            </div>
+
+            <nav class="navbar">
+                <ul class="nav-list sidebar">
+                    <li class="nav-item">
+                        <a href="" class="nav-link" onclick="closeMenu()"><span class="material-symbols-outlined">
+                            close
+                            </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Cart</a>
+                    </li>
+                </ul>
+                <ul class="nav-list">
+                    <li class="nav-item hideOnMobile">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item hideOnMobile">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item hideOnMobile">
+                        <a href="#" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item hideOnMobile">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item hideOnMobile">
+                        <a href="#" class="nav-link">Cart</a>
+                    </li>
+                    <li class="nav-item menu-btn">
+                        <a href="#" class="nav-link" onclick="showMenu()"><span class="material-symbols-outlined">
+                            menu
+                            </span></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <script src="main.js"></script>
+    </body>
 </html>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 /* >> RESET */
     *,
     *::before,
@@ -12,6 +14,10 @@
 /* >> GENERAL STYLES */
     html{
         scroll-behavior: smooth;
+    }
+
+    body{
+        font-family: sans-serif;
     }
 /*  */
 
@@ -91,4 +97,105 @@
         outline: none;
         background-color: rebeccapurple;
         color: white;
+    }
+/*  */
+
+
+/* >>>>> HEADER STYLES <<<<< */
+    .header{
+        box-shadow: 2px 1px 10px rgba(128, 128, 128, 0.295);
+        padding: 8px 30px;
+        height: 100px;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .header .logo{
+        font-size: 30px;
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+        font-style: normal;
+    }
+/* >> NAVBAR */
+    .navbar{
+    }
+
+    .navbar ul{
+        
+
+        display: flex;
+        gap: 2rem;
+    }
+
+    .navbar li{
+        list-style: none;
+        margin-right: 15px;
+    }
+
+    .navbar a{
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .navbar a:hover{
+        color: greenyellow;
+    }
+    
+
+    nav .sidebar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999; /* To make sure the sidebar will always be above evrything else set the z-index to 999 */
+        background-color: rgba(255, 255, 255, 0.096);
+        backdrop-filter: blur(2px);
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+    
+      .sidebar li{
+        width: 100%;
+      }
+    
+      .sidebar a{
+        width: 100%;
+      }
+
+      .menu-btn{
+        display: none;
+      }
+
+/* >>>>> RESPONSIVE WEB <<<<< */
+    @media(max-width: 900px){
+            .hideOnMobile{
+                display: none;
+            }
+        /* >>>>> HEADER STYLES */
+            .header{
+                height: 75px;
+
+                justify-content: space-between;
+            }
+            .header .logo{
+                font-size: 20px;
+            }
+        /* >>>>> SIDEBAR */
+            .menu-btn{
+                display: contents;
+            }
+            nav .sidebar{
+                width: 50%;
+                display: none;
+            }
     }
