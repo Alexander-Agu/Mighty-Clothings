@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /* >> RESET */
     *,
     *::before,
@@ -18,6 +20,13 @@
 
     body{
         font-family: sans-serif;
+        width: 100%;
+        background-color: rgb(31, 31, 33);
+
+    }
+
+    main{
+        width: 100%;
     }
 /*  */
 
@@ -78,7 +87,7 @@
         height: 40px;
         border: none;
         outline: none;
-        background-color: black;
+        background-color: white;
         color: white;
     }
 
@@ -103,7 +112,7 @@
 
 /* >>>>> HEADER STYLES <<<<< */
     .header{
-        box-shadow: 2px 1px 10px rgba(128, 128, 128, 0.295);
+
         padding: 8px 30px;
         height: 100px;
 
@@ -112,13 +121,13 @@
         align-items: center;
     }
 
-    .header .logo{
+    .header h2{
+        color: white;
         font-size: 30px;
         font-family: "Anton", sans-serif;
         font-weight: 400;
         font-style: normal;
-
-        font-style: normal;
+        letter-spacing: 1px;
     }
 /* >> NAVBAR */
     .navbar{
@@ -139,7 +148,7 @@
     .navbar a{
         font-size: 20px;
         text-decoration: none;
-        color: black;
+        color: white;
     }
 
     .navbar a:hover{
@@ -198,8 +207,13 @@
         align-items: center;
         justify-content: space-around;
     }
+
+    .intro h1{
+        color: white;
+    }
     
     .hero span{
+        color: white;
         font-size: 8rem;
         align-items: center;
         font-family: "Anton", sans-serif;
@@ -221,14 +235,89 @@
         height: 80px;
         width: 150px;
         font-size: 20px;
-        color: black;
+        color: white;
         font-weight: bolder;
         text-decoration: none;
-        border: 3px solid black;
+        border: 3px solid white;
 
         display: grid;
         place-content: center;
     }
+/*  */
+
+
+/* >>>>> MAIN STYLES <<<<< */
+/* >>>>> Coupons */
+    .coupons{
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coupon{
+        height: 45%;
+        width: 50%;
+        
+
+        display: grid;
+        place-content: center;
+    }
+    .coupon h2{
+        color: white;
+        text-align: center;
+        margin-bottom: 16px;
+        font-size: 45px;
+        align-items: center;
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .coupon p{
+        text-align: center;
+        color: white;
+        margin-bottom: 16px;
+        font-size: 40px;
+        align-items: center;
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+
+        display: grid;
+        place-content: center;
+    }
+/* >>> COUPON ITEMS */
+    .couponItems{
+
+
+        display: flex;
+        gap: 2rem;
+    }
+    .coupon-item{
+        height: 55vh;
+        border: 4px solid white;
+        padding: 16px;
+        border-radius: 12px;
+
+        display: grid;
+        place-content: center;
+    }
+
+    .coupon-item:hover{
+        background-color: black;
+        transition: 300ms;
+    }
+
+    .coupon-item img{
+        height: 100%;
+        border: 2px solid white;
+        padding: 20px;
+    }
+    
 /* >>>>> RESPONSIVE WEB <<<<< */
     @media(max-width: 1500px){
         /* >>>>> HERO */
@@ -243,6 +332,10 @@
             .shop-cart a{
                 height: 60px;
                 width: 130px;
+            }
+        /* >>>>>  */
+            .coupon-item{
+                height: 45vh;
             }
     }
     @media(max-width: 1000px){
@@ -278,7 +371,16 @@
             }
     }
     @media(max-width: 400px){
+        /* >>>>> HEADER */
+            nav .sidebar{
+                width: 100%;
+            }
+        /*  */
+
         /* >>>>> HERO */
+            .hero{
+                margin-bottom: 40px;
+            }
             .hero h1{
                 font-size: 19px;
             }
@@ -286,7 +388,21 @@
             .hero span{
                 font-size: 4rem;
             }
-            nav .sidebar{
-                width: 100%;
-            }
+        /*  */
+
+        /* >>>> COUPONS */
+        .coupon{
+            width: 100%;
+            padding: 16px;
+        }
+
+        .coupon h2{
+            font-size: 30px;
+        }
+
+        .coupon p{
+            font-size: 20px;
+            padding: 16px;
+        }
+
     }
