@@ -27,6 +27,7 @@
 
     main{
         width: 100%;
+        height: 100%;
     }
 /*  */
 
@@ -121,13 +122,8 @@
         align-items: center;
     }
 
-    .header h2{
-        color: white;
-        font-size: 30px;
-        font-family: "Anton", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        letter-spacing: 1px;
+    .header img{
+        width: 40%;
     }
 /* >> NAVBAR */
     .navbar{
@@ -253,7 +249,7 @@
         height: 100vh;
 
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         flex-direction: column;
         align-items: center;
     }
@@ -292,22 +288,30 @@
     }
 /* >>> COUPON ITEMS */
     .couponItems{
-
+        height: 55vh;
+        width: 250px;
 
         display: flex;
+        justify-content: center;
+        flex-direction: column;
         gap: 2rem;
     }
+
+    .couponItems div{
+
+        display: flex;
+        justify-content: center;
+    }
     .coupon-item{
-        height: 55vh;
-        border: 4px solid white;
         padding: 16px;
         border-radius: 12px;
 
-        display: grid;
-        place-content: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 
-    .coupon-item:hover{
+    .coupon-item img:hover{
         background-color: black;
         transition: 300ms;
     }
@@ -316,6 +320,33 @@
         height: 100%;
         border: 2px solid white;
         padding: 20px;
+    }
+
+    .switch-btn{
+        height: 100px;
+        display: none;
+    }
+
+    .switch-btn button{
+        width: 80px;
+        height: 80px;
+        background-color: transparent;
+        outline: none;
+        color: white;
+        border: 2px solid white;
+        border-radius: 50%;
+        margin-left: 20px;
+    }
+
+    #won-coupon{
+        width: 500px;
+        text-align: center;
+        color: white;
+        font-size: 80px;
+        align-items: center;
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        font-style: normal;
     }
     
 /* >>>>> RESPONSIVE WEB <<<<< */
@@ -333,10 +364,16 @@
                 height: 60px;
                 width: 130px;
             }
-        /* >>>>>  */
-            .coupon-item{
-                height: 45vh;
+        /* >>>>> COUPONS */
+            .coupon-item img{
+                height: 70%;
+                background-color: black;
             }
+
+            .switch-btn{
+
+                display: flex;
+            } 
     }
     @media(max-width: 1000px){
         /* >>>>> HERO */
@@ -358,6 +395,9 @@
                 font-size: 20px;
             }
         /* >>>>> SIDEBAR */
+            nav .sidebar{
+                width: 80%;
+            }
             .menu-btn{
                 display: contents;
             }
@@ -369,8 +409,12 @@
             .hero{
 
             }
+        /* >>>>> COUPONS */
+            .coupon{
+                margin: 150px;
+            }
     }
-    @media(max-width: 400px){
+    @media(max-width: 600px){
         /* >>>>> HEADER */
             nav .sidebar{
                 width: 100%;
@@ -394,6 +438,7 @@
         .coupon{
             width: 100%;
             padding: 16px;
+            margin-bottom: 200px;
         }
 
         .coupon h2{
