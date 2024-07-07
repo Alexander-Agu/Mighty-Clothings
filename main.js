@@ -72,3 +72,20 @@ function checkClicked(btn, coupon){
         }
     }
 }
+
+// Scrolling
+let scrollContainer = document.querySelector(".coupon-gallery");
+let leftBTN = document.getElementById("left");
+let rightBTN = document.getElementById("right");
+
+scrollContainer.addEventListener("wheel", (evt)=>{
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY
+});
+
+rightBTN.addEventListener("click", ()=>{
+    scrollContainer.scrollLeft += 150
+});
+leftBTN.addEventListener("click", ()=>{
+    scrollContainer.scrollLeft -= 150
+});
