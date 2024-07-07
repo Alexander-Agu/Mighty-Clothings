@@ -383,9 +383,8 @@
     }
 /* >>>>> Shop Items */
     .shop-item{
-        width: 400px;
-        height: 50%;
-        border: 2px solid greenyellow;
+        width: 600px;
+        height: 100%;
         background-image: url(img/shoeShop.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -397,10 +396,15 @@
     }
 
     .shop-details{
-        background-image: linear-gradient(180deg,transparent , black);
+        background-image: linear-gradient(to bottom,transparent , black);
         width: 100%;
+        height: 50%;
         border-top: 5px 77px ;
         padding: 16px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
     }
 
     .shop-details h2{
