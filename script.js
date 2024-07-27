@@ -13,6 +13,8 @@ const jsLoginBTN = document.getElementById("js-login");
 
 let loginInfo = [];
 
+
+
 // Handles the signIn link to direct user to from the login to sign up page
 signUp.onclick = ()=>{
     names.textContent = "Create Username";
@@ -38,6 +40,8 @@ signUp.onclick = ()=>{
 
         localStorage.setItem("Detail", stringIfiedArray);
 
+        const indexPage = document.location = 'index.html';
+
     }
 };
 
@@ -49,6 +53,8 @@ login.onclick = ()=>{
     // If user enters the correct details he will be directed to the landing page
     if(backToObject.name === nameInput.value && backToObject.number === numberInput.value && backToObject.password === passwordInput.value){
         console.log("Alex" )
+        const indexPage = document.location = 'index.html';
+        
     }else{
         alert("Please enter the correct details")
     }

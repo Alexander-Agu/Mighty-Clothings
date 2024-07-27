@@ -388,6 +388,7 @@
         background-image: url(img/shoeShop.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
 
         display: flex;
         flex-direction: column;
@@ -487,6 +488,43 @@
                 width: 200px;
                 font-size: 30px;
             }
+        /*  */
+
+        /* >>>>> SHOP STYLES */
+            .shop{
+                height: initial;
+            }
+
+            .shop h2{
+                font-size: 40px;
+            }
+
+            .store-variaty{
+
+
+                display: flex;
+                flex-direction: column;
+            }
+
+            .shop-item{
+                height: 300px;
+                width: initial;
+                background-position: center;
+            }
+
+            .shop-details h2{
+                font-size: 30px;
+
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+
+            
+
+            .shop-details p{
+                font-size: 20px;
+            }
     }
     @media(max-width: 1000px){
         /* >>>>> HERO */
@@ -547,23 +585,33 @@
         /*  */
 
         /* >>>> COUPONS */
-        .coupon{
-            width: 100%;
-            padding: 16px;
-            margin-bottom: 0px;
-        }
+            .coupon{
+                width: 100%;
+                padding: 16px;
+                margin-bottom: 0px;
+            }
 
-        .coupon-item:first-child{
-            margin-left: 350px;
-        }
+            .coupon-item:first-child{
+                margin-left: 350px;
+            }
 
-        .coupon h2{
-            font-size: 30px;
-        }
+            .coupon h2{
+                font-size: 30px;
+            }
 
-        .coupon p{
-            font-size: 20px;
-            padding: 16px;
-        }
+            .coupon p{
+                font-size: 20px;
+                padding: 16px;
+            }
+        /*  */
+
+        /* >>>> SHOP STYLES */
+            .shop-btn button{
+                height: 40px;
+                width: 50px;
+                font-size: 16px;
+                text-align: center;
+                padding: initial;
+            }
 
     }
