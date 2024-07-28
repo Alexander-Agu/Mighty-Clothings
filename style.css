@@ -498,23 +498,11 @@
     .quantity span:nth-child(3){
         color: green;
     }
+/*  */
 
     
 /* >>>>> RESPONSIVE WEB <<<<< */
-    @media(max-width: 1500px){
-        /* >>>>> HERO */
-            .hero span{
-                font-size: 6rem
-            };
-
-            .intro{
-                justify-content: space-evenly;
-            }
-
-            .shop-cart a{
-                height: 60px;
-                width: 130px;
-            }
+    @media(max-width: 1800px){
         /* >>>>> COUPONS */
             .coupon-item img{
                 height: 70%;
@@ -549,7 +537,41 @@
                 width: 200px;
                 font-size: 30px;
             }
+            /*  */
+        /* >>>>> STORE ITEMS STYLES <<<<< */
+            .store-container{
+                padding: 16px;
+
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+
+            .store-item{
+                width: 300px;
+                height: 450px;
+                padding: 16px;
+                border: 2px solid white;
+                border-radius: 10px;
+            }
         /*  */
+    }
+    @media(max-width: 1500px){
+        /* >>>>> HERO */
+            .hero span{
+                font-size: 6rem
+            };
+
+            .intro{
+                justify-content: space-evenly;
+            }
+
+            .shop-cart a{
+                height: 60px;
+                width: 130px;
+            }
+        /*  */
+
 
         /* >>>>> SHOP STYLES */
             .shop{
@@ -581,17 +603,30 @@
                 align-items: flex-start;
             }
 
-            
-
             .shop-details p{
                 font-size: 20px;
             }
+        /*  */
+
+        /* >>>>> STORE ITEMS STYLES <<<<< */
+            .store-item h2{
+                font-size: 30px;
+                color: white;
+                padding: 10px;
+            }
+
+            .price h3{
+                font-size: 20px;
+                color: white;
+            }
+        /*  */
     }
     @media(max-width: 1000px){
         /* >>>>> HERO */
             .hero span{
                 font-size: 5rem
             };
+        /*  */
 
             
     }
@@ -619,46 +654,29 @@
                 width: 50%;
                 display: none;
             }
+        /*  */
+
         /* >>>>> HERO */
             .hero{
 
             }
+        /*  */
+
         /* >>>>> COUPONS */
             .coupon{
                 margin: 150px;
             }
+        /*  */  
+        
+        /* >>>>> STORE ITEMS STYLES <<<<< */
+            .store-container{
+                padding: 16px;
 
-            /* >>>>> STORE ITEMS STYLES <<<<< */
-    .store-container{
-        padding: 16px;
-
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        place-items: center;
-        gap: 1rem;
-    }
-
-    .store-item{
-        width: 400px;
-        padding: 16px;
-        border: 2px solid white;
-        border-radius: 10px;
-    }
-
-    .store-item img{
-        width: 100%;
-    }
-
-    .store-item p{
-        color: white;
-    }
-
-    .store-item h2{
-        font-size: 30px;
-        color: white;
-        padding: 10px;
-    }
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+            }
+        /*  */
     }
     @media(max-width: 600px){
         /* >>>>> HEADER */
@@ -708,5 +726,23 @@
                 text-align: center;
                 padding: initial;
             }
+        /*  */
+
+        .store-container{
+            padding: 16px;
+
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+        }
+
+        .store-item{
+            width: 300px;
+            height: 450px;
+            padding: 16px;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+    /*  */
 
     }

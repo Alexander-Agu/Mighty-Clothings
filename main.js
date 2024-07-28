@@ -89,3 +89,6 @@ rightBTN.addEventListener("click", ()=>{
 leftBTN.addEventListener("click", ()=>{
     scrollContainer.scrollLeft -= 150
 });
+
+
+// ----- SHOPPING CART ----- \\
