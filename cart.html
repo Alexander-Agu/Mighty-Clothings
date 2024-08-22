@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mighty Cart</title>
+        <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="logo">
+                <a href="#"><img src="img/logo.png" alt=""></a>
+            </div>
+
+            <nav class="navbar">
+                <ul class="nav-list sidebar">
+                    <li class="nav-item">
+                        <a href="" class="nav-link" onclick="closeMenu()"><span class="material-symbols-outlined">
+                            close
+                            </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Cart</a>
+                    </li>
+                </ul>
+                <ul class="nav-list">
+                    <li class="nav-item hideOnMobile">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item hideOnMobile">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item hideOnMobile">
+                        <a href="#" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item hideOnMobile">
+                        <a href="login.html" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item hideOnMobile">
+                        <a href="#" class="nav-link">Cart</a>
+                    </li>
+                    <li class="nav-item menu-btn">
+                        <a href="#" class="nav-link" onclick="showMenu()"><span class="material-symbols-outlined">
+                            menu
+                            </span></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="cart-hero">
+                <h1>Mighty Cart</h1>
+            </section>
+
+            <article class="cart">
+                <div class="home-btn">
+                    <a href="index.html">Back Home</a>
+                </div>
+
+                <div class="total-price">
+                    <h2>Total:</h2>
+                    <h2>R2500</h2>
+                </div>
+
+                <div class="cart-container">
+                    
+                </div>
+            </article>
+        </main>
+        
+        <script src="JS/cart.js"></script>
+    </body>
+</html>
