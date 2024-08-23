@@ -92,7 +92,7 @@ leftBTN.addEventListener("click", ()=>{
 // ----- SHOPPING CART ----- \\
 // Constant Variable
 const kickShopButton = document.getElementById('kick-btn');
-const cargoShopButton = document.getElementById('cargp-btn');
+const cargoShopButton = document.getElementById('cargo-btn');
 const acesoryShopButton = document.getElementById('acces-btn');
 const mainElement = document.querySelector('main');
 /* const storeContainer = document.querySelector('.store-container'); */
@@ -209,7 +209,6 @@ Product.prototype.decreaseButton = function(){
 function saveData(){
     localStorage.setItem('Mighty Cart', JSON.stringify(basket));
 }
-console.log(basket)
 
 // Instantiate kick products
 const kick1 = new Product('img/Kicks/kick1.jpg', 'Jordan 1', 2500, description);
@@ -217,16 +216,36 @@ const kick2 = new Product('img/Kicks/kick2.jpg', 'Jordan 2', 200, description);
 const kick3 = new Product('img/Kicks/kick3.jpg', 'Air Jordan', 3000, description);
 const kick4 = new Product('img/Kicks/kick4.jpg', 'Air Max Trainers', 2300, description);
 
+// instantiate Cargo products
+const cargo1 = new Product('img/Cargos/cargo1.jpg', '', 2500, description);
+const cargo2 = new Product('img/Cargos/cargo2.jpg', 'Jordan1', 2500, description);
+const cargo3 = new Product('img/Cargos/cargo3.jpg', 'Jordan2', 2500, description);
+const cargo4 = new Product('img/Cargos/cargo4.jpg', 'Jordan3', 2500, description);
+
+// Instantiate Cargo products
+
 // Creates the Store Container div and appends it in the Main HTML Element
 function createStoreContainer(){
+    mainElement.innerHTML = '';
+
+    let button = document.createElement('button');
+    button.id = 'back-btn';
+    button.innerHTML = `<span class="material-symbols-outlined">
+    arrow_back
+    </span>`;
+    
+    button.onclick = ()=> location.reload();
+
+    mainElement.append(button)
+
     let div = document.createElement('div');
     div.className = 'store-container';
     mainElement.append(div);
 };
 
 // Easier and faster way to call all the prototypes eventListners on the products
-function displayKicks(){
-    const kickItems = [kick1, kick2, kick3, kick4];
+function displayProducts(...products){
+    const kickItems = products;
 
     // To display product info in the HTML
     kickItems.map(x => x.displayProduct());
@@ -240,7 +259,12 @@ function displayKicks(){
 
 // Displays the kick products
 kickShopButton.onclick = () => {
-    mainElement.innerHTML = '';
     createStoreContainer();
-    displayKicks();
+    displayProducts(kick1, kick2, kick3, kick4);
+};
+
+// Displays the Cargo products
+cargoShopButton.onclick = () => {
+    createStoreContainer();
+    displayProducts(cargo1, cargo2, cargo3, cargo4);
 };
