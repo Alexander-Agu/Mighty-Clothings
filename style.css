@@ -795,6 +795,10 @@ border: 1px solid white;
         color: white;
         margin: 10px;
     }
+
+    #back-btn:hover{
+        cursor: pointer;
+    }
     @media(max-width: 1200px){
         .cart-hero h1{
             font-size: 7rem;
