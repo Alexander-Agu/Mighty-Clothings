@@ -217,12 +217,16 @@ const kick3 = new Product('img/Kicks/kick3.jpg', 'Air Jordan', 3000, description
 const kick4 = new Product('img/Kicks/kick4.jpg', 'Air Max Trainers', 2300, description);
 
 // instantiate Cargo products
-const cargo1 = new Product('img/Cargos/cargo1.jpg', '', 2500, description);
-const cargo2 = new Product('img/Cargos/cargo2.jpg', 'Jordan1', 2500, description);
-const cargo3 = new Product('img/Cargos/cargo3.jpg', 'Jordan2', 2500, description);
-const cargo4 = new Product('img/Cargos/cargo4.jpg', 'Jordan3', 2500, description);
+const cargo1 = new Product('img/Cargos/cargo1.jpg', 'Silicon Hemp', 600, description);
+const cargo2 = new Product('img/Cargos/cargo2.jpg', 'Just Slate', 250, description);
+const cargo3 = new Product('img/Cargos/cargo3.jpg', 'Black Tee', 150, description);
+const cargo4 = new Product('img/Cargos/cargo4.jpg', 'Black Chyna', 860, description);
 
-// Instantiate Cargo products
+// instantiate Cargo products
+const acesory1 = new Product('img/Accesories/aces1.jpg', 'Gold Earrings', 260, description);
+const acesory2 = new Product('img/Accesories/aces2.jpg', 'Neck Emefest', 4000, description);
+const acesory3 = new Product('img/Accesories/aces3.jpg', 'Diamond Ring', 10000, description);
+const acesory4 = new Product('img/Accesories/aces4.jpg', 'Diamond Earring', 5600, description);
 
 // Creates the Store Container div and appends it in the Main HTML Element
 function createStoreContainer(){
@@ -267,4 +271,10 @@ kickShopButton.onclick = () => {
 cargoShopButton.onclick = () => {
     createStoreContainer();
     displayProducts(cargo1, cargo2, cargo3, cargo4);
+};
+
+// Displays the Accessory products
+acesoryShopButton.onclick = () => {
+    createStoreContainer();
+    displayProducts(acesory1, acesory2, acesory3, acesory4);
 };
