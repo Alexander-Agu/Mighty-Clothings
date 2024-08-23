@@ -12,35 +12,43 @@ const totalPrice = document.getElementById('total-price');
 let basket = JSON.parse(localStorage.getItem('Mighty Cart')) || [];
 console.log(basket);
 
-// Displays cart
-const displayCartItems = () => {
-    return cartContainer.innerHTML = `
-    <div class="cart-item">
-        <img src="img/Kicks/kick1.jpg" alt="" width="200">
+// Iterates throgh an array and display content on the html page
+function searchBasket(){
+    for(let i = 0; i < basket.length; i++){
+        // Displays cart
+        const displayCartItems = () => {
+            return cartContainer.innerHTML += `
+            <div class="cart-item">
+                <img src=${basket[i].img} alt="" width="200">
 
-        <div class="cart-info">
-            <h2>Jordan 1</h2>
+                <div class="cart-info">
+                    <h2>${basket[i].name}</h2>
 
-            <h2 id="total-price">R2500</h2>
+                    <h2 id="total-price">R${basket[i].price}</h2>
 
-            <div class="cart-quantity">
-                <button>
-                    <span class="material-symbols-outlined">
-                        remove
-                    </span>
-                </button>
-    
-                <p>0</p>
+                    <div class="cart-quantity">
+                        <button>
+                            <span class="material-symbols-outlined">
+                                remove
+                            </span>
+                        </button>
+            
+                        <p>${basket[i].quantity}</p>
 
-                <button>
-                    <span class="material-symbols-outlined">
-                        add
-                    </span>
-                </button>
+                        <button>
+                            <span class="material-symbols-outlined">
+                                add
+                            </span>
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    `
-}
+            `
+        };
+        displayCartItems();
+    };
+};
+searchBasket();
 
-displayCartItems()
+
+
