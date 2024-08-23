@@ -181,15 +181,16 @@ Product.prototype.increaseItem = function(){
 Product.prototype.decreaseButton = function(){
     // Gave every item a unique ID to make the subtract button work independently on all products 
     return document.getElementById(`subtract-${this.name}`).onclick = () => {
-        this.quantity -= 1;
         if(this.quantity > 0){
+            this.quantity -= 1;
             for(let i = 0; i < basket.length; i++){
                 if(basket[i].name === this.name){
                     basket[i].quantity = this.quantity;
                 };
             };
+
         } 
-        else if(this.quantity === 0){
+        if(this.quantity === 0){
             basket.pop({
                 img: this.img,
                 name: this.name,
@@ -198,7 +199,7 @@ Product.prototype.decreaseButton = function(){
                 des: this.des
             });
         };
-        saveData()
+        saveData();
 
         // Displays the quantity of products
         document.getElementById(`${this.name}-quantity`).textContent = this.quantity;

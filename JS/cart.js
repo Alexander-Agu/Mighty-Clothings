@@ -12,6 +12,15 @@ const totalPrice = document.getElementById('total-price');
 let basket = JSON.parse(localStorage.getItem('Mighty Cart')) || [];
 console.log(basket);
 
+// Displays the total price of the products
+let addedPrice = 0;
+let addedlQuantity = 0;
+for(let i = 0; i < basket.length; i++){
+    addedPrice += basket[i].price;
+    addedlQuantity += basket[i].quantity
+}
+finalPrice = addedPrice * addedlQuantity;totalPrice.textContent = addedPrice * addedlQuantity;
+
 // Iterates throgh an array and display content on the html page
 function searchBasket(){
     for(let i = 0; i < basket.length; i++){
@@ -24,7 +33,7 @@ function searchBasket(){
                 <div class="cart-info">
                     <h2>${basket[i].name}</h2>
 
-                    <h2 id="total-price">R${basket[i].price}</h2>
+                    <h2 id="total-price">R${basket[i].price * basket[i].quantity}</h2>
 
                     <div class="cart-quantity">
                         <button>
@@ -49,6 +58,3 @@ function searchBasket(){
     };
 };
 searchBasket();
-
-
-
